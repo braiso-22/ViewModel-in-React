@@ -1,0 +1,13 @@
+.loginCard {
+    background-color: rgba(159, 159, 159, 0.87);
+    color: #242424;
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.loginCard>input{
+    margin: 0.5rem;
+}
