@@ -1,0 +1,23 @@
+.buddyList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buddyRow {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buddyRow:hover {
+    background-color: #a0a0a0;
+}
+
+.buddyData {
+    margin-right: 20px;
+}

@@ -1,0 +1,11 @@
+.buddyRow {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: black;
+}
+
+.buddyData {
+    margin-right: 20px;
+    color: white;
+}

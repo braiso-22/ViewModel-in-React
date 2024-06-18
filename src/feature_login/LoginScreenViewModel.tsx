@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState ,useEffect} from "react";
 import { UiEvent, when } from "../dsl/UiEventDLS";
 import { SetName, SetPassword, ClickSubmit } from "./events/LoginEvents";
 import { LoginCardUiState } from "./state/LoginUiState";
@@ -9,6 +9,10 @@ export const LoginScreenViewModel = () => {
         password: "",
     })
     const [result, setResult] = useState("")
+
+    useEffect(()=>{
+        console.log("LoginScreenViewModel created")
+    }, []);
 
     const onEvent = (event: UiEvent) => {
         when(event)
