@@ -1,4 +1,4 @@
-import { useState ,useEffect} from "react";
+import { useState, useEffect } from "react";
 import { UiEvent, when } from "../dsl/UiEventDLS";
 import { SetName, SetPassword, ClickSubmit } from "./events/LoginEvents";
 import { LoginCardUiState } from "./state/LoginUiState";
@@ -10,7 +10,7 @@ export const LoginScreenViewModel = () => {
     })
     const [result, setResult] = useState("")
 
-    useEffect(()=>{
+    useEffect(() => {
         console.log("LoginScreenViewModel created")
     }, []);
 
@@ -24,8 +24,8 @@ export const LoginScreenViewModel = () => {
                 ...loginState,
                 password: event.password
             }))
-            .option(ClickSubmit).do(_ => { 
-                getUserLogin() 
+            .option(ClickSubmit).do(_ => {
+                getUserLogin()
             })
     }
 
