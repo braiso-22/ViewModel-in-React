@@ -14,17 +14,34 @@ No more undescifrable useEffects
 
 ## Extructure
 
-```txt
-- feature*/
-    - components/
-        - comp*.tsx
-        - index.css
-    - state/
-        - UiState*.tsx
-    - events/
-        - events*.tsx
-
-    - Screen*.tsx
-    - ScreenViewModel*.tsx
-    - index.css
+```text
+${feature}/
+│
+├── components/ ----------------------------> page-specific components, if any
+│   │
+│   ├── ${component}/
+│   │   │
+│   │   ├── state/
+│   │   │   └── ${component}UIState.ts
+│   │   │
+│   │   ├── events/
+│   │   │   └── {component}Events.ts
+│   │   │
+│   │   ├── ${component}.css
+│   │   ├── ${component}Presenter.ts
+│   │   └── ${component}.tsx
+│   │
+│   └── .../ -------------------------------> same structure, repeat for n number of components
+│
+├── state/
+│   │
+│   └── ${page}UIState.ts ------------------> state of the UI definition
+│
+├── events/
+│   │
+│   └── ${page}Events.ts -------------------> view events definitions
+│
+├── ${page}Style.css
+├── ${page}Presenter.ts --------------------> page logic
+└── ${page}.tsx ----------------------------> page view
 ```
